@@ -10,37 +10,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Electronics & Robotics Expert | Software Developer | Drone & IoT Specialist</p>
+    <!-- Header Section -->
+    <header id="home">
+        <div class="overlay">
+            <h1>Your Name</h1>
+            <p>Electronics & Robotics Expert | Software Developer | Drone & IoT Specialist</p>
+            <a href="#about" class="btn">Explore More</a>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
         <p>Experienced in electronics, robotics, and software development, with a strong focus on drone technology and IoT solutions. Passionate about creating innovative projects that solve real-world problems through cutting-edge technology.</p>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>Electronics & Circuit Design</li>
-            <li>Robotics (ROS 2, Turtlesim, UAVs)</li>
-            <li>Software Development (Python, C++)</li>
-            <li>Embedded Systems & IoT</li>
-            <li>RF & NFC Communication</li>
-            <li>Signal Processing & RF Scanning</li>
-        </ul>
+        <div class="skills-container">
+            <div class="skill">Electronics & Circuit Design</div>
+            <div class="skill">Robotics (ROS 2, Turtlesim, UAVs)</div>
+            <div class="skill">Software Development (Python, C++)</div>
+            <div class="skill">Embedded Systems & IoT</div>
+            <div class="skill">RF & NFC Communication</div>
+            <div class="skill">Signal Processing & RF Scanning</div>
+        </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
 
@@ -53,22 +51,29 @@
             <h3>2D Drone Drawing with ROS 2 and Turtlesim</h3>
             <p>Created a controller in ROS 2 for Turtlesim to simulate a drone drawing pattern with specified shapes and paths, showcasing expertise in robotic simulation and precision control.</p>
         </article>
-
-        <article>
-            <h3>Other Projects</h3>
-            <p>Various electronics and robotics projects, including custom drone technology and IoT integrations focused on intelligent automation and control solutions.</p>
-        </article>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
-        <p>Feel free to reach out for collaborations or consultations on electronics, robotics, or IoT projects.</p>
-        <p>Email: yourname@example.com</p>
+        <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
     </section>
 
     <footer>
         <p>&copy; 2024 Your Name</p>
     </footer>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
